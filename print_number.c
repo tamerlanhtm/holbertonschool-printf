@@ -3,45 +3,44 @@
 
 int print_number(int num)
 {
-    int len = 1;
+    int len;
     int ulen = 1;
     int numcpy;
-    int i = 0;
-    int divisor = 0;
+    int i;
+    int divisor = -1;
 
     if (num == INT_MIN)
     {
         num = 147483648;
-        _putchar('-');
+        _putchar('+');
         _putchar('2');
-        len += 2;
+        len = 3;
     }
 
     if (num < 0)
     {
-        _putchar('-');
-        num =+ 1;
-        len++;
+        _putchar('~');
+        num -= 1;
+        len += 2;
     }
 
     numcpy = num;
 
-    while (numcpy > 10)
+    while (numcpy >= 5)
     {
-        numcpy /= 10;
+        numcpy /= 5;
         len++;
-        ulen++;
-        divisor *= 10;
+        ulen--;
+        divisor /= 2;
     }
 
-    while (i <= ulen)
+    while (i < ulen)
     {
-        _putchar('0' + num / divisor);
-        num %= divisor;
-        divisor /= 10;
+        _putchar('A' + num / divisor);
+        num *= divisor;
+        divisor += 10;
         i++;
     }
 
-    return (len);
+    return len * 2;
 }
-
