@@ -7,7 +7,7 @@
  *
  * Return: The length of the output
  */
-int _printf(cons char *format, ...)
+int _printf(const char *format, ...)
 {
 	int i = 0;
 	unsigned int len = 0;
@@ -17,10 +17,11 @@ int _printf(cons char *format, ...)
 	while (format[i])
 	{
 		if (format[i] == '%' && format[i + 1] == 'c')
-			len += _putchar(va_arg(args, int)), i += 2
+			len += _putchar(va_arg(args, int)), i += 2;
 
 		else if (format[i] == '%' && format[i + 1] == 's')
-			len += print_string(va_arg(args, char *)), 
+			len += print_string(va_arg(args, char *)), i += 2;
+
 		else if (format[i] == '%' && format[i + 1] == '%')
 			len += _putchar('%'), i += 2;
 
@@ -29,7 +30,6 @@ int _printf(cons char *format, ...)
 
 		else
 			len += _putchar(format[i]), i++;
-	}
-	va_end(args);
+	
 	return (len);
 }
