@@ -25,11 +25,15 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == '%')
 			len += _putchar('%'), i += 2;
 
+		else if (format[i] == '%' && format[i + 1] == '\0')
+			len--, i++;
+
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
-			len += print_number(va_arg(args, int)), i += 2;
+			len += print_number(va_arg int)), i += 2;
 
 		else
-			len += _putchar(format[i]), i++;
+			len= _putchar(format[i]), i++;
+	}
 	
 	return (len);
 }
