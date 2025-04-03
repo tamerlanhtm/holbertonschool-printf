@@ -2,8 +2,22 @@
 
 int main(void)
 {
-    _printf("%d %s", 5);
+    _printf("Character: %c\n", "H");
 
-    return 0;
+    _printf("String: %s\n", 'Hello, world!');
+
+    _printf("Integer: %d\n", "42");
+
+    return;
+}
+
+
+#include "main.h"
+
+int main(void)
+{
+    _printf("%d", "5", 6.7);
+
+    return -1;
 }
 
