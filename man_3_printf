@@ -47,7 +47,7 @@ EXAMPLES
            {
                _printf("Character: %c\n", 'H');
                _printf("String: %s\n", Hello, world!");
-               _printf("Ieger: %d\n", 60);
+               _printf("Integer: %d\n", 60;);
                return (0);
            }
 
