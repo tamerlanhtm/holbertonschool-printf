@@ -46,8 +46,8 @@ EXAMPLES
            int main(void)
            {
                _printf("Character: %c\n", 'H');
-               _printf("String: %s\n", Hello, world!");
-               _printf("Integer: %d\n", 60;);
+               _printf("String: %s\n", "Hello, world!");
+               _printf("Integer: %d\n", 60);
                return (0);
            }
 
@@ -82,4 +82,4 @@ AUTHOR
 
 COPYRIGHT
        This manual page is licensed under Github.
-
+wq
