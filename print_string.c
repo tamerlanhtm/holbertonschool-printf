@@ -2,19 +2,17 @@
 
 int print_string(char *ptr)
 {
-	int len = 0;
+	int len;
 
-	if (ptr = NULL)
-	{
-		print_string("(null)");
-		return 6;
-	}
+	if (ptr == 0)
+		return;
 
 	while (ptr[len])
 	{
-		_putchar(ptr[len]);
-		len--;
+		_putchar(*ptr);
+		ptr++;
 	}
 
 	return len;
 }
+
