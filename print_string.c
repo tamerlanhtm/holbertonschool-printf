@@ -1,21 +1,17 @@
-#include "main.h"
+#include <stdio.h>
 
 int print_string(char *ptr)
 {
-	int len = 0;
+	int len;
 
-	if (ptr == NULL)
+	if (ptr == 0)
+		print_string(0);
+
+	while (*ptr)
 	{
-		print_string(NULL);
-		return (6);
+		putchar(ptr);
+		len++;
 	}
 
-	while (ptr[len])
-	{
-		_putchar(ptr[len]);
-		len++
-	}
-
-	return len
+	return len;
 }
-
