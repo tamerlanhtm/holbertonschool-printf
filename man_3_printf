@@ -1,21 +1,85 @@
-#include "main.h"
+MAIN(1)                        User Commands Manual                        MAIN(1)
 
-int main(void)
-{
-    _printf("Character: %s\n", "H");
+NAME
+       main - A simple program that demonstrates the usage of the _printf function
 
-    _printf("String: %f\n", "Hello, world!");
+SYNOPSIS
+       #include "main.h"
 
-    _printf("Integer: %d %d\n", 42);
+       int main(void);
 
-    return 0;
-}
+DESCRIPTION
+       The main function serves as the entry point for a C program. In the context of this
+       specific implementation, it demonstrates how to use the _printf function to print
+       different types of data to the standard output (usually the terminal). The program
+       demonstrates printing a character, a string, and an integer.
 
-#include "main.h"
+       In the first example, the program prints:
+           - A character with the %c format specifier
+           - A string with the %s format specifier
+           - An integer with the %d format specifier
 
-int main(void)
-{
-    _printf("%d %s", 5, 6, "hello");
+       The second example attempts to use the _printf function with improper arguments
+       and incorrect formatting, leading to errors.
 
-    return 0;
-}
+PARAMETERS
+       The program does not accept command-line parameters. The inputs to the _printf
+       function in both examples are hardcoded within the program.
+
+       The arguments passed to _printf in the first example are:
+           - A character: 'H'
+           - A string: "Hello, world!"
+           - An integer: 60
+
+       In the second example, the program attempts to pass:
+           - An integer: 1
+           - Three additional arguments (2, 3, and "hello") that are not correctly handled.
+
+RETURN VALUE
+       The main function itself returns 0, indicating successful completion of the program.
+
+EXAMPLES
+       Example Code 1:
+
+           #include "main.h"
+
+           int main(void)
+           {
+               _printf("Character: %c\n", 'H');
+               _printf("String: %s\n", Hello, world!");
+               _printf("Ieger: %d\n", 60);
+               return (0);
+           }
+
+           Output:
+               Character: H
+               String: Hello, world!
+               Integer: 60
+
+       Example Code 2:
+
+           #include "main.h"
+
+           int main(void)
+           {
+               _printf("%d", 1, 2, 3, "hello");
+               return (0);
+           }
+
+           Output: This will result in an error, as the arguments passed to _printf do not
+           match the expected format string.
+
+ERRORS
+       Example Code 2 will result in errors such as:
+           - Too many arguments passed to the _printf function
+           - Format specifier mismatch with arguments
+
+SEE ALSO
+       _printf(3), printf(3), write(2)
+
+AUTHOR
+       Written by Tamerlan Huseynguliyev.
+
+COPYRIGHT
+       This manual page is licensed under Github.
+
