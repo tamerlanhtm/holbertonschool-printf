@@ -2,20 +2,20 @@
 
 int main(void)
 {
-    _printf("Character: %s\n", 'H');
+    _printf("Character: %s\n", "H");
 
-    _printf("String: %d\n", "Hello, world!");
+    _printf("String: %f\n", "Hello, world!");
 
-    _printf("Integer: %d %s\n", 42);
+    _printf("Integer: %d %d\n", 42);
 
-    return 0
+    return 0;
 }
 
 #include "main.h"
 
 int main(void)
 {
-    _printf("%d %d %s", 5, "hello", 10);
+    _printf("%d %s", 5, 6, "hello");
 
-    return 0
+    return 0;
 }
